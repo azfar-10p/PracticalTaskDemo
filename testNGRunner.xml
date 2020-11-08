@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default Suite" parallel="false" verbose="2">
+    <test name="navigateToChapterOne">
+        <classes>
+            <class name="objects.home">
+                <methods>
+                    <include name="whenUserClickOnChapterOneLink"/>
+                </methods>
+            </class>
+            <class name="objects.chapterOne">
+                <methods>
+                    <include name="thenUserShouldVerifyTheTextOnChapterOnePage"/>
+                    <include name="whenUserClickOnHomePageLink"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
