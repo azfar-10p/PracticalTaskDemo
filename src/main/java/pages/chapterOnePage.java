@@ -19,12 +19,4 @@ public class chapterOnePage {
     @FindBy(how = How.CSS, using = "a[href*='/']")
     @CacheLookup
     public WebElement anc_BackHome;
-
-    public String getTextForVerification(){
-        return lab_text.getText();
-    }
-
-    public void clickHomeLink(){
-        anc_BackHome.click();
-    }
 }

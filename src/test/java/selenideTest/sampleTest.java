@@ -1,6 +1,6 @@
 package selenideTest;
 
-import configurationFile.configReader;
+import Utilities.configReader;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 

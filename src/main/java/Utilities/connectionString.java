@@ -1,12 +1,10 @@
-package connection;
+package Utilities;
 
-import configurationFile.configReader;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
 
 public class connectionString {
 
@@ -14,13 +12,14 @@ public class connectionString {
     public configReader reader;
 
     public connectionString() {
+
         reader = new configReader();
+        Initializer();
     }
 
     //region This method is use to Initialize a Web Driver like Chrome Driver and Navigate to The Automated Tester
     // WebDriverManager, can automatically download the driver’s binary files
     // for all the browsers (Chrome, Firefox, Opera, IE and Microsoft Edge etc.)
-    @BeforeSuite
     public void Initializer() {
         if (driver == null) {
             try {
