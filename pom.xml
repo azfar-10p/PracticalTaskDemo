@@ -90,5 +90,14 @@
             <scope>test</scope>
         </dependency>
         <!-- endregion -->
+
+        <!-- region Selenide 5.15.1 -->
+        <!-- https://mvnrepository.com/artifact/com.codeborne/selenide -->
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>selenide</artifactId>
+            <version>5.15.1</version>
+        </dependency>
+        <!-- endregion -->
     </dependencies>
 </project>
