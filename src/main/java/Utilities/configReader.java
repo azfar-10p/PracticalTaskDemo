@@ -25,7 +25,7 @@ public class configReader {
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-            throw new RuntimeException("Configuration.properties not found at " + propertyFilePath);
+            throw new RuntimeException("config.properties not found at " + propertyFilePath);
         }
     }
     //endregion
@@ -36,7 +36,7 @@ public class configReader {
         if (appURL != null) return appURL;
         else
             throw new RuntimeException(
-                    "appURL not specified in the Configuration.properties file.");
+                    "appURL not specified in the config.properties file.");
     }
     //endregion
 }

@@ -16,4 +16,8 @@ public class homePage {
     @FindBy(how = How.CSS, using = "a[href*='chapter1']")
     @CacheLookup
     public WebElement anc_Chapter1;
+
+    public void clickingOnChapterOneLink() {
+        anc_Chapter1.click();
+    }
 }

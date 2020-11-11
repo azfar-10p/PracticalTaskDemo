@@ -8,6 +8,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 public class chapterOnePage {
+
     public chapterOnePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
@@ -19,4 +20,12 @@ public class chapterOnePage {
     @FindBy(how = How.CSS, using = "a[href*='/']")
     @CacheLookup
     public WebElement anc_BackHome;
+
+    public String getTextFromChapterOne() {
+        return lab_text.getText();
+    }
+
+    public void clickingOnHomeLink() {
+        anc_BackHome.click();
+    }
 }

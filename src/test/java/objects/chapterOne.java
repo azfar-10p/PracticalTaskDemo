@@ -10,20 +10,19 @@ public class chapterOne extends connectionString {
     chapterOnePage cp;
     private String labText;
 
-    public chapterOne(){
+    public chapterOne() {
         cp = new chapterOnePage(driver);
     }
 
     @Test(priority = 1)
-    public void thenUserShouldVerifyTheTextOnChapterOnePage(){
-        labText = cp.lab_text.getText();
-        Assert.assertEquals(labText, "Assert that this text is on the page");
-        System.out.println("Verified Text: " + labText);
+    public void thenUserShouldVerifyTheTextOnChapterOnePage() {
+        Assert.assertEquals(cp.getTextFromChapterOne(), "Assert that this text is on the page");
+        System.out.println("Verified Text: " + cp.getTextFromChapterOne());
     }
 
     @Test(priority = 2)
-    public void whenUserClickOnHomePageLink(){
+    public void whenUserClickOnHomePageLink() {
         System.out.println("Clicking on Home Page link...");
-        cp.anc_BackHome.click();
+        cp.clickingOnHomeLink();
     }
 }
